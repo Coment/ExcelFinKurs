@@ -9,11 +9,8 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
-import com.finkurs.allpages.AccountPage;
 import com.finkurs.allpages.FinanceNbu;
 import com.finkurs.allpages.FinanceSite;
-import com.finkurs.allpages.HomePage;
 import com.finkurs.allpages.KursMigBank;
 import com.finkurs.allpages.KursSite;
 import com.finkurs.util.Browser;
@@ -33,10 +30,6 @@ public class TestBase {
 	protected EventFiringWebDriver eventDriver;
 	protected String websiteUrl;
 	protected Browser browser;
-
-	protected HomePage home;
-
-	protected AccountPage user;
 	protected FinanceSite finHome;
 	protected FinanceNbu finNbu;
 	protected KursSite kursHome;
