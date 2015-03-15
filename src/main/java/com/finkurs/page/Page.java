@@ -67,7 +67,6 @@ public abstract class Page {
 		} else {
 			resultBool = false;
 		}
-		System.out.println("ExcelResult= " + resultBool + " " + result);
 		return resultBool;
 	}
 }

@@ -17,8 +17,9 @@ public class FinanceSite extends Page {
 	@FindBy(how = How.XPATH, using = "//ul[@class=\"sn_menu\"]//a[@href='/nbu/']")
 	public WebElement NBU;
 
-	public void moveToNbu() {
-		webDriver.get("http://finance.i.ua");
+	public void moveToNbu(String path) {
+		System.out.println("TestSitePath = "+ path);
+		webDriver.get(path);
 		NBU.click();
 	}
 }

@@ -16,8 +16,9 @@ public class KursSite extends Page {
 	@FindBy(how = How.XPATH, using = "//div[@class=\"menu_top_level2\"]/ul/li[4]/a")
 	public WebElement KursMigBank;
 
-	public void moveToMigBank() {
-		webDriver.get("http://kurs.com.ua");
+	public void moveToMigBank(String path) {
+		System.out.println("TestSitePath = "+ path);
+		webDriver.get(path);
 		KursMigBank.click();
 	}
 }

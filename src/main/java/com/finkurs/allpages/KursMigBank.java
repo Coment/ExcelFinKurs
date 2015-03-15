@@ -23,5 +23,5 @@ public class KursMigBank extends Page {
 
 	@FindBy(how = How.XPATH, using = "//tbody/tr[2]/td[3]/div[@class=\"value\"]")
 	public WebElement MigEur;
-
+	
 }

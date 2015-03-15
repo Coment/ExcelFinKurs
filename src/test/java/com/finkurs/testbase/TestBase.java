@@ -28,7 +28,9 @@ public class TestBase {
 
 	// protected WebDriver webDriver;
 	protected EventFiringWebDriver eventDriver;
-	protected String websiteUrl;
+	protected String websiteFinUrl;
+	protected String websiteKursUrl;
+	protected String pathToExcelFile;
 	protected Browser browser;
 	protected FinanceSite finHome;
 	protected FinanceNbu finNbu;
@@ -42,14 +44,17 @@ public class TestBase {
 
 		browser = new Browser();
 		browser.setName(browserName);
-
+		websiteFinUrl = PropertyLoader.loadProperty("finUrl");
+		websiteKursUrl = PropertyLoader.loadProperty("kursUrl");
+		pathToExcelFile = PropertyLoader.loadProperty("pathToExcel");
+		System.out.println("Property path = " + pathToExcelFile);
 		WebDriver webDriver2 = WebDriverFactory.getInstance(browser.getName());
 		eventDriver = new EventFiringWebDriver(webDriver2);
 		eventDriver.register(new WebDriverListener());
 		eventDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		pathExcelFile = "C:\\RegressionData.xlsx";
-		ExcelUtils excelcr = new ExcelUtils(pathExcelFile);
+		//pathExcelFile = "C:\\RegressionData.xlsx";
+		ExcelUtils excelcr = new ExcelUtils(pathToExcelFile);
 		excelcr.createSheet();
 
 		finHome = PageFactory.initElements(eventDriver, FinanceSite.class);

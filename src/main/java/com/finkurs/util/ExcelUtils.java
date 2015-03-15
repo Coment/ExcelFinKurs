@@ -75,7 +75,6 @@ public class ExcelUtils {
 				out.close();
 				workbook.close();
 				System.out.println("Creation sheet completed");
-				System.out.println("Path = " + excelFile);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -95,16 +94,16 @@ public class ExcelUtils {
 				XSSFSheet sheet = workbook.getSheetAt(0);
 				Cell cell = null;
 				// Update the value of cell
-				if (site.equals("Finance") && currency.equals("USD")) {
+				if (site.equals("http://finance.i.ua") && currency.equals("USD")) {
 					cell = sheet.getRow(1).getCell(1);
 					cell.setCellValue(kurs);
-				} else if (site.equals("Finance") && currency.equals("EUR")) {
+				} else if (site.equals("http://finance.i.ua") && currency.equals("EUR")) {
 					cell = sheet.getRow(2).getCell(1);
 					cell.setCellValue(kurs);
-				} else if (site.equals("Kurs") && currency.equals("USD")) {
+				} else if (site.equals("http://kurs.com.ua") && currency.equals("USD")) {
 					cell = sheet.getRow(1).getCell(2);
 					cell.setCellValue(kurs);
-				} else if (site.equals("Kurs") && currency.equals("EUR")) {
+				} else if (site.equals("http://kurs.com.ua") && currency.equals("EUR")) {
 					cell = sheet.getRow(2).getCell(2);
 					cell.setCellValue(kurs);
 				}

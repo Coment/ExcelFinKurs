@@ -26,10 +26,10 @@ public class FinanceNbu extends Page {
 	@FindBy(how = How.XPATH, using = "//table//tr[./td[contains(text(),'EUR')]]/td[4]")
 	public WebElement NbuEur;
 
-	public double Usd (WebElement USD){
-		String finUsd = USD.getText();
-		double finValue = Double.parseDouble(finUsd);
-		return finValue; 
-	}
+	//public double Usd (WebElement USD){
+	//	String finUsd = USD.getText();
+	//	double finValue = Double.parseDouble(finUsd);
+	//	return finValue; 
+	//}
 	
 }
