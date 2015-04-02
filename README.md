@@ -1,3 +1,3 @@
 # ExcelFinKurs
-Program compares the rates from the two finance sites. 
-Writes courses in excel file, and assert the result (True, False) if a difference of  less or more 30% .
+Based on Java+Selenium Webdriver+TestNG+Maven.
+Application collects data of exchange rates from two different sites, saves in excel file and compares the percentage of exchange rates by the formula (formula described in excel column). On the basis of the ratio saves the results (<30% "True", else "False").
